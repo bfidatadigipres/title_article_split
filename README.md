@@ -3,7 +3,7 @@ All of these scripts and tests have been used in Python3 only.
 
 During the creation of several scripts that write film and television titles to BFI National Archive collections database records, a title article splitting recipe has evolved into the scripts in this repository. These scripts allow for language ISO codes (alpha-2) to be paired with roman alphabet titles, so that definite and indefinite articles can be identified and separated from the titles. This is completed using predefined articles in a dictionary and string comparisons to the title supplied.  The title and title article are then supplied back for inclusion in the database's title and title article fields.
 
-With thanks to the BFI for inclusion of the TITLE_ARTICLE dictionary. The dictionary contents may have first originated from AACR2 documentation, but over the years additions have been made by BFI staff.
+With thanks to the BFI Information team for inclusion of the TITLE_ARTICLE dictionary. The dictionary contents may have first originated from AACR2 documentation, but over the years additions have been made by BFI Collections and Information staff.
 
 Known issues: In some Scandinavian languages, such as Danish, there are instances where the article does not reside before the noun but is appended as an indication of definiteness. Similarly, with some Balkan languages the final vowel of a noun (or even some occasion internal noun changes) can indicate the presence of an article. We have not yet included these examples, and no doubt many others, but hope they can develop in time and with greater understanding. We welcome all feedback and collaboration in developing these scripts.
 
