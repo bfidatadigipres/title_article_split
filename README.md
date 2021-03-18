@@ -15,7 +15,7 @@ Suggested inputs for testing the script:
 - python3 title_article_input.py "The Lighthouse" "en"
 - python3 title_article_input.py "L'atalante" "fr"
 
-Where your exmaples include French or Italian titles and the article is joined to the noun, eg "L'atalante" "fr", you should wrap the title in double quotes, allowing for the L' to pass as part of the string. Otherwise the script will not function correctly.
+Where your examples include French or Italian titles and the article is joined to the noun, eg "L'atalante" "fr", you should wrap the title in double quotes, allowing for the L' to pass as part of the string. Otherwise the script will not function correctly.
 
 #### Script function:
 1. main() accepts two arguments as input and passes these to the splittler method
