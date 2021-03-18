@@ -1,7 +1,7 @@
 # Title article splitting scripts
 All of these scripts and tests have been used in Python3 only.
 
-During the creation of several scripts that write film and television titles to BFI National Archive collections database records, a title article splitting recipe has evolved into the scripts in this repository. These scripts allows for language ISO codes (alpha-2) to be paired with roman alphabet titles, so that definite and indefinite articles can be identified and separated from the titles. This is completed using predefined articles in a dictionary and string comparisons to the title supplied.  The title and title article are then supplied back for inclusion in the database's title and title article fields.
+During the creation of several scripts that write film and television titles to BFI National Archive collections database records, a title article splitting recipe has evolved into the scripts in this repository. These scripts allow for language ISO codes (alpha-2) to be paired with roman alphabet titles, so that definite and indefinite articles can be identified and separated from the titles. This is completed using predefined articles in a dictionary and string comparisons to the title supplied.  The title and title article are then supplied back for inclusion in the database's title and title article fields.
 
 With thanks to the BFI for inclusion of the TITLE_ARTICLE dictionary. The dictionary contents may have first originated from AACR2 documentation, but over the years additions have been made by BFI staff.
 
