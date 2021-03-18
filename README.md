@@ -6,7 +6,7 @@ With thanks to the BFI for inclusion of the TITLE_ARTICLE dictionary. The dictio
 
 Known issues: In some Scandinavian languages, such as Danish, there are instances where the article does not reside before the noun but is appended afterward as an indication of definiteness. Similarly, with some Balkan languages the final vowel of a noun (or even some occasion internal noun changes) can indicate the presence of an article. We have not yet include these examples, and no doubt many others, in the code but hope they can develop in time and with greater understanding. We welcome all feedback and collaboration in developing the script.
 
-## title_artlicle_input.py
+## title_article_input.py
 
 This script allows for command line input of a title and ISO country code for immediate return of the title, title article. Developed as a quick way to test multiple title options and the dictionary look up for different country's articles.
 
