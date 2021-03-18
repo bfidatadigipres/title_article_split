@@ -18,34 +18,33 @@ Suggested inputs for testing the script:
 Where your examples include French or Italian titles and the article is joined to the noun, eg "L'atalante" "fr", you should wrap the title in double quotes, allowing for the L' to pass as part of the string. Otherwise the script will not function correctly.
 
 #### Script function:
-1. main() accepts two arguments as input and passes these to the splittler method
+1. main() accepts two arguments as input and passes these to the splitter() function
 2. splitter() reformats uppercase titles using Python's title() string method, and the iso code to lower().
    - if the title length is 1:
      the script checks for articles attached to the beginning of the title using Python's startswith() method.
    - if the title length is more than 1:
-     the script checks for titles attached again, but also for separate articles in the first word position using startswith().
-   splitter() finally uses extracted title_article to double check for a match in the dictionary before returning 'title' and 'title_art' variables to main().
+     the script checks for articles attached again, but also for separate articles in the first word position using startswith().
+3. splitter() finally uses extracted title_article to double check for a match in the dictionary before returning 'title' and 'title_art' variables to main().
 
 ## title_article.py
 
 This script functions as a module to be imported to a script and called with two arguments, title and ISO country code. This returns separated title and title article to the callng script, both of which can be stored in a variable for immediate use.
 
 #### Script function:
-1. splitter() receives two arguments title and ISO country code, reformats uppercase titles using Python's title() string method, and the iso code to lower().
+1. splitter() receives two arguments, title and ISO country code, reformats uppercase titles using Python's title() string method, and the iso code to lower().
    - if the title length is 1:
      the script checks for articles attached to the beginning of the title using Python's startswith() method.
    - if the title length is more than 1:
-     the script checks for titles attached again, but also for separate articles in the first word position using startswith().
-   splitter() finally uses extracted title_article to double check for a match in the dictionary before returning 'title' and 'title_art' variables
+     the script checks for articles attached again, but also for separate articles in the first word position using startswith().
+2. splitter() finally uses extracted title_article to double check for a match in the dictionary before returning 'title' and 'title_art' variables
 
-With both scripts, where articles are found the Python string split() method is used to separate the two, the article is then formatted using Python's string capitalize() method and the apostrophe is re-attached to the article, but the hyphen is discarded at present. Where the article was attached by a hyphen or apostrophe, the first letter of the newly separated title is capitalised. The title is reformed using Python's join() method, and where the first word contains both an article and title Python appends the split noun to the remainder of the title as a list.
+With both scripts, where articles are found the Python string split() method is used to separate the two, the article is then formatted using Python's string capitalize() method and the apostrophe is re-attached to the article, but the hyphen is discarded at present. Where the article was attached by a hyphen or apostrophe, the first letter of the newly separated title is capitalised. The title is reformed using Python's join() method, and where the first word contains both an article and title Python appends the split noun to the remainder of the title as a list before rejoining them all as the title variable.
 
 ## test_title_article.py
 
 Test script for the title and title_article return function of title_article.py script. No import of pytest is required to run the test, but you will need it installed and the test code in the same folder as your working code. It should also have the same name as the script to be tested to make it easier to find when you have many tests/scripts in a directory.
 
-You will need to install pytest. The easiest and safest way is to use pip to install into a Virtual Environment.
-(Guidance here: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+You will need to install pytest. The easiest and safest way is to use pip to install into a Virtual Environment. Guidance here: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
 There are two ways to run a pytest. Change directory of your terminal console to the folder that holds both the scripts and run: `pytest -v`
 This will run any/all scripts prefixed "test_" as long as they have the same script name after this prefix, so "test_title_article.py" is the test for "title_article.py".
