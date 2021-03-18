@@ -16,5 +16,25 @@ python3 title_article_input.py "L'atalante" "fr"
 
 Where your exmaples include French or Italian titles and the article is joined to the noun, eg "L'atalante" "fr", you should wrap the title in double quotes, allowing for the L' to pass as part of the string. Otherwise the script will not function correctly.
 
-### Script function:
+#### Script function:
+1. main() accepts two arguments as input and passes these to the splittler method
+2. splitter() reformats uppercase titles using Python's title() string method, and the iso code to lower().
+   - if the title length is 1:
+     the script checks for articles attached to the beginning of the title using Python's startswith() method.
+   - if the title length is more than 1:
+     the script checks for titles attached again, but also for separate articles in the first word position using startswith().
+   splitter() finally uses extracted title_article to double check for a match in the dictionary before returning 'title' and 'title_art' variables to main().
 
+## title_article.py
+
+This script functions as a module to be imported to a script and called with two arguments, title and ISO country code. This returns separated title and title article to the callng script, both of which can be stored in a variable for immediate use.
+
+#### Script function:
+1. splitter() receives two arguments title and ISO country code, reformats uppercase titles using Python's title() string method, and the iso code to lower().
+   - if the title length is 1:
+     the script checks for articles attached to the beginning of the title using Python's startswith() method.
+   - if the title length is more than 1:
+     the script checks for titles attached again, but also for separate articles in the first word position using startswith().
+   splitter() finally uses extracted title_article to double check for a match in the dictionary before returning 'title' and 'title_art' variables
+
+With both scripts, where articles are found the Python string split() method is used to separate the two, the article is then formatted using Python's string capitalize() method and the apostrophe is re-attached to the article, but the hyphen is discarded at present. Where the article was attached by a hyphen or apostrophe, the first letter of the newly separated title is capitalised. The title is reformed using Python's join() method, and where the first word contains both an article and title Python appends the split noun to the remainder of the title as a list.
